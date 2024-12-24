@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Infotech</title>
+    <link rel="icon" href="./Images File/logo.png">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(90deg, rgb(234, 235, 244) 0%,  rgb(94, 193, 238) 40%, rgb(234, 235, 244) 100%);
+        }
+        .container {
+            background-color: rgb(195, 229, 243);
+            margin-top: 30px;
+            margin-bottom: 2%;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 5px 5px 10px rgba(5, 5, 5, 0.1);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: navy;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            color: navy;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        text {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px
+        }
+        #text {
+            width: 100%;
+            height: 70px;
+            margin-top: 7px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            border: none;
+            resize: none;
+            
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .row input[type="text"] {
+            width: calc(29% - 12px);
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .buttons button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+        }
+        .buttons .back {
+            background-color: #757575;
+        }
+        .buttons .submit {
+            background-color: navy;
+        }
+        .formerror {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Inquiry Form</h2>
+        <form id="inquiryForm" action="IF.php" name="myForm" onsubmit="return validateForm()" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <span id="name-error" class="formerror"></span>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="number" id="mobile" name="mobile" placeholder="Enter your mobile no." required>
+            <span id="mobile-error" class="formerror"></span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <span id="email-error" class="formerror"></span>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address" required>
+            <span id="address-error" class="formerror"></span>
+
+            <div class="row">
+                <input type="text" id="city" name="city" placeholder="City" required>
+                <input type="text" id="district" name="district" placeholder="District" required>
+                <input type="text" id="state" name="state" placeholder="State" required>
+            </div>
+            <span id="location-error" class="formerror"></span>
+
+            <label for="message">Leave Your Message:</label>
+            <textarea id="text" name="message" placeholder="Your messages"></textarea>
+
+            <div class="buttons">
+                <button type="submit" class="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var mobile = document.getElementById('mobile').value;
+            var email = document.getElementById('email').value;
+            var address = document.getElementById('address').value;
+
+
+            // Mobile number validation
+            if (!/^\d{10}$/.test(mobile)) {
+                document.getElementById('mobile-error').textContent = 'Mobile number must be 10 digits';
+                return false;
+            } else {
+                document.getElementById('mobile-error').textContent = '';
+            }
+
+            // If all validations pass, form submits
+            return true;
+        }
+    </script>
+
+
+</body>
+</html>

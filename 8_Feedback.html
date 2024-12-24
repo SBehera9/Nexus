@@ -1,0 +1,419 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Infotech</title>
+  <link rel="icon" href="./Images File/logo.png">
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+
+
+
+
+  /* nav bar */
+  
+  .navbar {
+    background: linear-gradient(90deg, rgb(140, 212, 241) 0%,  rgb(22, 158, 221) 40%, rgb(140, 212, 241) 100%);   
+    position: fixed; 
+    width: 100%; 
+    z-index: 1000; 
+      .btn-primary{
+        text-align: center;
+        justify-content: center;
+        padding: 10px 20px;
+        border: 2px solid white;
+        border-radius: 20px;
+        color: white;
+        text-decoration: none;
+        background-color: navy;
+        font-weight: bold;
+      }
+      .btn-primary:hover{
+        background-color: green;
+        color: white;
+       
+      }
+    }
+    .navbar-brand {
+      color: navy !important;
+      font-size: 20px; 
+      font-weight: bold; 
+    }
+    .navbar-nav .nav-link {
+      color: white !important;
+      font-size: 20px;
+      margin-left: 10px;
+      font-weight: 500; 
+    }
+    .navbar-nav .nav-link:hover{
+      color: navy !important;
+    }
+    .navbar-toggler {
+      border-color: #FDFEFE;
+    }
+    .navbar-toggler-icon {
+      color: #fff;
+      background-color: transparent;
+    }
+    
+    .navbar-brand img {
+      height: 45px;
+      width: auto;
+      border-radius: 50px;
+    }
+    .nav-item:hover .dropdown-menu {
+      display: block;
+      background-color: rgb(207, 235, 247);
+      border-radius: 5px;
+    }
+
+
+
+
+  /* what our student says */
+
+    .container-fluid{
+        margin-top: 70px;
+        background: linear-gradient(90deg, rgb(234, 235, 244) 0%,  rgb(94, 193, 238) 40%, rgb(234, 235, 244) 100%);
+        padding-top: 20px;
+        h1{
+            font-size: 50px;
+            font-weight: bold;
+            color: navy;
+        }
+    }
+    .feedback-box {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out; 
+      background: rgb(224, 239, 245);
+      height: 350px;
+    }
+    .feedback-box:hover {
+     transform: translateY(-7px); 
+     border: 3px solid #5DADE2;
+     box-shadow: 2px 5px 10px #1291e7; 
+    }
+
+    .video-section {
+      margin-bottom: 15px;
+    }
+    .student-name {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .feedback-text {
+      font-style: italic;
+    }
+
+
+
+
+
+
+
+    /* footer */
+
+    .footer-bottom {
+        text-align: center;
+        background-color: black;
+        color: white;
+        height: 60px;
+        font-size: 15px;
+        padding-top: 20px;
+      }
+
+
+      
+  </style>
+
+</head>
+<body>
+
+
+
+
+
+Navbar
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="1_Home.html">
+    <img src="./Images File/logo.png" alt="">
+    <span class="ml-2 company-name">Nexus Infotech</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="2_Service.html" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Service
+        </a>
+        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+          <a class="dropdown-item" href="2_Service.html#aa">Build your Website</a>
+          <a class="dropdown-item" href="2_Service.html#ab ">Build your WebApplication</a>
+          <a class="dropdown-item" href="2_Service.html#ac">Digital Marketing</a>
+          <a class="dropdown-item" href="2_Service.html#ad">Data Analytics/Bussiness Intelligence</a>
+          <a class="dropdown-item" href="2_Service.html#af">ERP</a>
+      </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="3_Training.html" id="trainingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Training
+        </a>
+        <div class="dropdown-menu" aria-labelledby="trainingDropdown">
+            <a class="dropdown-item" href="3_Training.html?course=FullStack">Fullstack Web Development</a>
+            <a class="dropdown-item" href="3_Training.html?course=MERN">MERN Stack</a>
+            <a class="dropdown-item" href="3_Training.html?course=DataScience">Data Science</a>
+            <a class="dropdown-item" href="3_Training.html?course=Dataanalytics">Data Analytics</a>
+            <a class="dropdown-item" href="3_Training.html?course=UI/UX">UI/UX</a>
+            <a class="dropdown-item" href="3_Training.html?course=java">Java/Python/PHP/SQL</a>
+            <a class="dropdown-item" href="3_Training.html?course=pgdca">PGDCA</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="4_Contact_Us.html">Contact Us</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="trainingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          More
+        </a>
+         <div class="dropdown-menu" aria-labelledby="trainingDropdown">
+          <a class="dropdown-item" href="5_Career.html">Career</a>
+          <a class="dropdown-item" href="6_Image_gallery.html#gallery">Image Gallery</a>
+          <a class="dropdown-item" href="6_Image_gallery.html#News & Events">News & Events</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="btn btn-primary" href="Inquiry_Form.php" role="button">Get Inquiry</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+  what our Student says
+
+<div class="container-fluid">
+  <h1 class="text-center my-4">What Our Students Say</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="feedback-box">
+        <div class="video-section">
+          <video width="100%" height="200" controls>
+            <source src="./Videos File/Student-2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="student-name">Sonu Sahu</div>
+        <div class="feedback-text">This course was fantastic and really helped me understand the topic.</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feedback-box">
+        <div class="video-section">
+          <video width="100%" height="200" controls>
+            <source src="./Videos File/Student-1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="student-name">Aditya Gouda</div>
+        <div class="feedback-text">Amazing experience, the instructors were very knowledgeable.</div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="feedback-box">
+        <div class="video-section">
+          <video width="100%" height="200" controls>
+            <source src="./Videos File/Student-3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="student-name">Prativa Sahu</div>
+        <div class="feedback-text">The course was challenging but very rewarding.</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feedback-box">
+        <div class="video-section">
+          <video width="100%" height="200" controls>
+            <source src="#" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="student-name"></div>
+        <div class="feedback-text">Highly recommend this course to anyone interested in the subject.</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feedback-box">
+        <div class="video-section">
+          <video width="100%" height="200" controls>
+            <source src="#" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="student-name"></div>
+        <div class="feedback-text">The instructors were very supportive and provided great feedback.</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feedback-box">
+        <div class="video-section">
+          <video width="100%" height="200" controls>
+            <source src="#" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="student-name">Sarah Lee</div>
+        <div class="feedback-text">This course helped me advance my career significantly.</div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+What Our Faculty Say
+
+
+  <h1 class="text-center my-4">What Our Faculty Say</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="feedback-box">
+        <div class="video-section">
+          <video width="100%" height="200" controls>
+            <source src="./Videos File/room.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="student-name">Srikant Panigrahi</div>
+        <div class="feedback-text">This course was fantastic and really helped me understand the topic.</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feedback-box">
+        <div class="video-section">
+          <video width="100%" height="200" controls>
+            <source src="./Videos File/Chinmayee maam.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="student-name">Chinmayee Maharana</div>
+        <div class="feedback-text">Amazing experience, the instructors were very knowledgeable.</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feedback-box">
+        <div class="video-section">
+          <video width="100%" height="200" controls>
+            <source src="./Videos File/Panda sir.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="student-name">Rasmi Ranjan Panda</div>
+        <div class="feedback-text">I learned so much, the hands-on projects were really beneficial.</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feedback-box">
+        <div class="video-section">
+          <video width="100%" height="200" controls>
+            <source src="#" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="student-name">Sonu Sahu</div>
+        <div class="feedback-text">This course was fantastic and really helped me understand the topic.</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feedback-box">
+        <div class="video-section">
+          <video width="100%" height="200" controls>
+            <source src="#" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="student-name">Aditya Gouda</div>
+        <div class="feedback-text">Amazing experience, the instructors were very knowledgeable.</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feedback-box">
+        <div class="video-section">
+          <video width="100%" height="200" controls>
+            <source src="#" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="student-name">Prativa Sahu</div>
+        <div class="feedback-text">I learned so much, the hands-on projects were really beneficial.</div>
+      </div>
+    </div>    
+  </div>
+
+</div>
+
+
+footer
+
+
+<div class="footer-bottom">
+  <p>&copy; 2024 NEXUS INFOTECH - All rights reserved</p>
+</div>
+
+
+
+
+
+
+<script>
+
+  // JavaScript to control video playback off
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var videos = document.querySelectorAll('video');
+
+    videos.forEach(function (video) {
+      video.addEventListener('play', function () {
+        pauseOtherVideos(video);
+      });
+    });
+
+    function pauseOtherVideos(currentVideo) {
+      videos.forEach(function (video) {
+        if (video !== currentVideo && !video.paused) {
+          video.pause();
+        }
+      });
+    }
+  });
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html> -->

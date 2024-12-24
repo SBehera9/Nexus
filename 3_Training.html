@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Infotech</title>
+  <link rel="icon" href="./Images File/logo.png">
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <style>
+  body {
+    font-family: 'Arial', sans-serif;
+     margin-top: 100px; /* Offset for fixed navbar */
+     background: linear-gradient(90deg, rgb(234, 235, 244) 0%,  rgb(94, 193, 238) 40%, rgb(234, 235, 244) 100%);
+    }
+
+
+
+
+
+ /* nav bar */
+  
+ .navbar {
+    background: linear-gradient(90deg, rgb(140, 212, 241) 0%,  rgb(22, 158, 221) 40%, rgb(140, 212, 241) 100%);   
+    position: fixed; 
+    width: 100%; 
+    z-index: 1000; 
+      .btn-primary{
+        text-align: center;
+        justify-content: center;
+        padding: 10px 20px;
+        border: 2px solid white;
+        border-radius: 20px;
+        color: white;
+        text-decoration: none;
+        background-color: navy;
+        font-weight: bold;
+      }
+      .btn-primary:hover{
+        background-color: green;
+        color: white;
+       
+      }
+    }
+    .navbar-brand {
+      color: navy !important;
+      font-size: 20px; 
+      font-weight: bold; 
+    }
+    .navbar-nav .nav-link {
+      color: white !important;
+      font-size: 20px;
+      margin-left: 10px;
+      font-weight: 500; 
+    }
+    .navbar-nav .nav-link:hover{
+      color: navy !important;
+    }
+    .navbar-toggler {
+      border-color: #FDFEFE;
+    }
+    .navbar-toggler-icon {
+      color: #fff;
+      background-color: transparent;
+    }
+    
+    .navbar-brand img {
+      height: 45px;
+      width: auto;
+      border-radius: 50px;
+    }
+    .nav-item:hover .dropdown-menu {
+      display: block;
+      background-color: rgb(207, 235, 247);
+      border-radius: 5px;
+    }
+
+
+    
+    
+
+
+
+
+/* our Training */
+
+    .container-fluid{
+      padding-bottom: 10px;
+      border: none;
+      .slide{
+        border: none;
+        margin-top: -20px;
+        .carousel-item{
+          border: none;
+          padding: 1%;
+          .container{
+            background-color:rgb(224, 239, 245);
+            border: none;
+            border-radius: 15px;
+            padding: 2%;
+            transition: transform 0.3s ease-in-out;
+            }
+           .container:hover {
+            transform: translateY(-7px); 
+            border: 2px solid  5DADE2;
+            box-shadow: 2px 5px 10px 1291e7; 
+             }
+            .row{
+              border: none;
+              padding: 3%;
+              .col-md-6{
+                border: none;
+                padding: 2%;
+                img{
+                  border-radius: 15px;
+                }
+              }
+            }
+           
+          }
+        }
+      }
+    
+    .course-description {
+      margin-top: 20px;
+    }
+    .enroll-btn {
+      margin-top: 20px;
+      background-color: navy;
+      color: white;
+    }
+    .download-btn{
+        background-color: navy;
+        color: white;
+        margin-top: 20px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+     .download-btn:hover{
+        background-color: Royalblue;
+     }
+    .carousel-controls {
+      margin-top: 20px;
+      text-align: center;
+      .btn {
+        background-color: navy;
+        color: white;
+      }
+    }
+    .text-center{
+        font-size: 40px;
+        font-weight: bold;
+        color: navy;
+        
+    }
+    span{
+      font-weight: 600;
+      color: navy;
+      font-size: 20px;
+    }
+
+
+
+
+
+
+/* footer-bottom */
+
+.footer-bottom {
+        text-align: center;
+        background-color: black;
+        color: white;
+        margin-top: 0.3%;
+        height: 60px;
+        font-size: 15px;
+        padding-top: 20px;
+      }
+
+  </style>
+
+</head>
+<body>
+
+
+
+
+
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="index.html">
+    <img src="./Images File/logo.png" alt="">
+    <span class="ml-2 company-name">Nexus Infotech</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="2_Service.html" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Service
+        </a>
+        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+          <a class="dropdown-item" href="2_Service.html#aa">Build your Website</a>
+          <a class="dropdown-item" href="2_Service.html#ab ">Build your WebApplication</a>
+          <a class="dropdown-item" href="2_Service.html#ac">Digital Marketing</a>
+          <a class="dropdown-item" href="2_Service.html#ad">Data Analytics/Bussiness Intelligence</a>
+            <a class="dropdown-item" href="2_Service.html#af">ERP</a>
+      </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="3_Training.html" id="trainingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Training
+        </a>
+        <div class="dropdown-menu" aria-labelledby="trainingDropdown">
+            <a class="dropdown-item" href="3_Training.html?course=FullStack">Fullstack Web Development</a>
+            <a class="dropdown-item" href="3_Training.html?course=MERN">MERN Stack</a>
+            <a class="dropdown-item" href="3_Training.html?course=DataScience">Data Science</a>
+            <a class="dropdown-item" href="3_Training.html?course=Dataanalytics">Data Analytics</a>
+            <a class="dropdown-item" href="3_Training.html?course=UI/UX">UI/UX</a>
+            <a class="dropdown-item" href="3_Training.html?course=java">Java/Python/PHP/SQL</a>
+            <a class="dropdown-item" href="3_Training.html?course=pgdca">PGDCA</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="4_Contact_Us.html">Contact Us</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="trainingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          More
+        </a>
+        <div class="dropdown-menu" aria-labelledby="trainingDropdown">
+          <a class="dropdown-item" href="5_Career.html">Career</a>
+          <a class="dropdown-item" href="6_Image_gallery.html#gallery">Image Gallery</a>
+          <a class="dropdown-item" href="6_Image_gallery.html#News & Events">News & Events</a>
+        </div>
+      </li>
+    </ul>
+    <!-- <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="btn btn-primary" href="Inquiry_Form.php" role="button">Get Inquiry</a>
+      </li>
+    </ul> -->
+  </div>
+</nav>
+
+
+
+
+
+
+  <!-- Our Traning -->
+
+  <div class="container-fluid">
+    <div id="courseCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" id="FullStack">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <img src="https://i.pinimg.com/originals/e0/58/ee/e058eecc0652ff38a4e7062cfcf08c9d.gif" height="370px" class="d-block w-100" alt="Course Image">
+              </div>
+              <div class="col-md-6">
+                <h2>Fullstack Web Development</h2>
+                <p class="course-description">Full stack web development involves building and maintaining both the front-end and back-end of web applications. This includes everything from the user interface and user experience to the server, database, and application logic.</p>
+                <p><strong>Duration:&nbsp</strong> 6 Month</p>
+                <p><strong>Certification:</strong> Yes</p>
+                <p><strong>Price:&nbsp</strong><span>12000Rs.</span></p>
+                <a href="Traning_Form.html" class="btn btn-primary enroll-btn" onclick="setCourse('Fullstack Web Development')">Enroll Now</a>
+                <a download href="./PDF files/FSWD.pdf" class="btn btn-primary download-btn">Brochure
+                  <i class="bi bi-download"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" id="MERN">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="https://cdn.servermania.com/kb/KB-MERN-Featured.jpg" height="370px" class="d-block w-100" alt="Course Image">
+                </div>
+                <div class="col-md-6">
+                  <h2>MERN Stack</h2>
+                  <p class="course-description">MERN stack combines MongoDB, Express.js, React, and Node.js to create powerful, full-stack JavaScript applications for the web.</p>
+                  <p><strong>Duration:&nbsp</strong>2 Month</p>
+                  <p><strong>Certification:</strong> Yes</p>
+                  <p><strong>Price:&nbsp</strong><span>8000Rs.</span></p>
+                  <a href="Traning_Form.html" class="btn btn-primary enroll-btn"  onclick="setCourse('MERN Stack Development')">Enroll Now</a>
+                  <a download href="./PDF files/MERNStack.pdf" class="btn btn-primary download-btn">Brochure
+                    <i class="bi bi-download"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="carousel-item" id="DataScience">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <img src="https://imarticus.org/blog/wp-content/uploads/2021/03/hhfhwf.gif" height="370px" class="d-block w-100" alt="Course Image">
+              </div>
+              <div class="col-md-6">
+                <h2>Data Science</h2>
+                <p class="course-description">Data science combines statistical analysis, data visualization, and machine learning to extract insights and knowledge from data. It involves data cleaning, preprocessing, modeling, and interpreting results.</p>
+                <p><strong>Duration:&nbsp</strong>6 Month</p>
+                <p><strong>Certification:</strong> Yes</p>
+                <p><strong>Price:&nbsp</strong><span>18000Rs.</span></p>
+                <a href="Traning_Form.html" class="btn btn-primary enroll-btn" onclick="setCourse('Data Science')">Enroll Now</a>
+                <a download href="./PDF files/DataScience.pdf" class="btn btn-primary download-btn">Brochure
+                  <i class="bi bi-download"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" id="Dataanalytics">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="https://cdn.dribbble.com/users/970957/screenshots/5504725/gif.gif" height="370px" class="d-block w-100" alt="Course Image">
+                </div>
+                <div class="col-md-6">
+                  <h2>Data Analytics</h2>
+                  <p class="course-description">Data analytics focuses on examining datasets to draw conclusions and identify patterns. It often involves statistical analysis and the use of specialized software to analyze data and create visualizations.</p>
+                  <p><strong>Duration:&nbsp</strong>4 Month</p>
+                  <p><strong>Certification:</strong> Yes</p>
+                  <p><strong>Price:&nbsp</strong><span>18000Rs.</span></p>
+                  <a href="Traning_Form.html" class="btn btn-primary enroll-btn" onclick="setCourse('Data Analytics')">Enroll Now</a>
+                  <a download href="./PDF files/Data Analytics.pdf" class="btn btn-primary download-btn">Brochure
+                    <i class="bi bi-download"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="carousel-item" id="UI/UX">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="https://dbaasltd.co.in/img/uiux.gif" height="370px" class="d-block w-100" alt="Course Image">
+                </div>
+                <div class="col-md-6">
+                  <h2>UI/UX</h2>
+                  <p class="course-description">UI (User Interface) and UX (User Experience) design involve creating user-friendly interfaces and enhancing user satisfaction through improved usability, accessibility, and interaction with the product.</p>
+                  <p><strong>Duration:&nbsp</strong>2 Month</p>
+                  <p><strong>Certification:</strong> Yes</p>
+                  <p><strong>Price:&nbsp</strong><span>8000Rs.</span></p>
+                  <a href="Traning_Form.html" class="btn btn-primary enroll-btn" onclick="setCourse('UI/UX')">Enroll Now</a>
+                  <a download href="./PDF files/UI_UX.pdf" class="btn btn-primary download-btn">Brochure
+                    <i class="bi bi-download"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="carousel-item" id="java">
+            <div class="container" >
+              <div class="row" >
+                <div class="col-md-6">
+                  <img src="https://cdn.intuji.com/2022/08/Software-development-digital-transformation_comp-scaled-1.jpeg" height="370px" class="d-block w-100" alt="Course Image">
+                </div>
+                <div class="col-md-6">
+                  <h2>Java/Python/
+                    <br>PHP/SQL</h2>
+                  <p class="course-description">Learn Java for object-oriented programming, Python for versatile scripting and data analysis, PHP for dynamic web development, and MySQL for efficient database management.</p>
+                  <p><strong>Duration:&nbsp</strong>5 Month</p>
+                  <p><strong>Certification:</strong> Yes</p>
+                  <p><strong>Price:&nbsp</strong><span>12000Rs</span></p>
+                  <a href="Traning_Form.html" class="btn btn-primary enroll-btn" onclick="setCourse('Java/Python/PHP/SQL')">Enroll Now</a>
+                  <a download href="#" class="btn btn-primary download-btn">Brochure
+                    <i class="bi bi-download"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="carousel-item" id="pgdca">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="https://www.techinaut.edu.in/wp-content/uploads/2019/07/TECHINAUT-PGDCA-POST-GRADUATE-DIPLOMA-IN-COMPUTER-APPLICATION-007.jpg" height="370px" class="d-block w-100" alt="Course Image">
+                </div>
+                <div class="col-md-6">
+                  <h2>PGDCA</h2>
+                  <p class="course-description">PGDCA is a one-year academic program designed to provide students with advanced knowledge in computer applications, including software development, system analysis, and database management.</p>
+                  <p><strong>Duration:&nbsp</strong> 6 Month</p>
+                  <p><strong>Certification:</strong> Yes</p>
+                  <p><strong>Price:&nbsp</strong><span>12000Rs.</span></p>
+                  <a href="Traning_Form.html" class="btn btn-primary enroll-btn"  onclick="setCourse('PGDCA')">Enroll Now</a>
+                  <a download href="./PDF files/PGDCA.pdf" class="btn btn-primary download-btn">Brochure
+                    <i class="bi bi-download"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Add more carousel items as needed -->
+
+      </div>
+    </div>
+
+    <div class="carousel-controls">
+      <button class="btn btn-primary" onclick="$('#courseCarousel').carousel('prev')">Previous</button>
+      <button class="btn btn-primary" onclick="$('#courseCarousel').carousel('next')">Next</button>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- footer-bottom -->
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 NEXUS INFOTECH - All rights reserved</p>
+</div>
+
+  
+
+
+  <script>
+
+        //bydefult
+
+    function setCourse(courseName) {
+      localStorage.setItem('selectedCourse', courseName);
+    }
+
+
+//our traning section
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const params = new URLSearchParams(window.location.search);
+    const course = params.get('course');
+    if (course) {
+      const carouselItems = document.querySelectorAll('.carousel-item');
+      carouselItems.forEach(item => item.classList.remove('active'));
+      const targetItem = document.getElementById(course);
+      if (targetItem) {
+        targetItem.classList.add('active');
+      }
+    }
+
+    
+
+    // Disable automatic sliding
+    $('#courseCarousel').carousel({
+      interval: false
+    });
+  });
+
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

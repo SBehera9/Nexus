@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Infotech</title>
+    <link rel="icon" href="./Images File/logo.png">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(90deg, rgb(234, 235, 244) 0%,  rgb(94, 193, 238) 40%, rgb(234, 235, 244) 100%);
+        }
+        .container {
+            margin-top: 50px;
+            background-color: rgb(195, 229, 243);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: navy;
+            font-weight: bold;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.875rem;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select {
+            border: none;
+        }
+        .btn {
+            background-color: navy;
+        }
+    </style>
+</head>
+
+<body>
+<div class="d-flex justify-content-center">
+    <div class="container">
+        <h1>Service Form</h1>
+        <form id="serviceForm" method="POST" action="SF.php" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>
+                <div id="nameError" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="number" class="form-control" name="mobile" id="phone" placeholder="Enter your phone number" required>
+                <div id="phoneError" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+                <div id="emailError" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" name="address" id="address" placeholder="Enter your address" required>
+                <div id="addressError" class="error-message"></div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <input type="text" class="form-control" name="city" id="city" placeholder="City" required>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="district" id="district" placeholder="District" required>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="state" id="state" placeholder="State" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="service">Choose your service</label>
+                <select class="form-control" name="service" id="course" required>
+                    <option value="">Select a Service</option>
+                    <option value="Build your Website">Build your Website</option>
+                    <option value="Build your Web Application">Build your Web Application</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="ERP">ERP</option>
+                    <option value="Data Analytics/Business Intelligence">Data Analytics/Business Intelligence</option>
+                </select>
+                <div id="serviceError" class="error-message"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function validateForm() {
+        var name = document.getElementById('name').value;
+        var phone = document.getElementById('phone').value;
+        var email = document.getElementById('email').value;
+        var address = document.getElementById('address').value;
+        var city = document.getElementById('city').value;
+        var district = document.getElementById('district').value;
+        var state = document.getElementById('state').value;
+        var service = document.getElementById('course').value;
+
+        var nameRegex = /^[a-zA-Z\s]{3,}$/;
+        var phoneRegex = /^[0-9]{10}$/;
+        var emailRegex = /@/; // Only checks for the presence of '@'
+
+        var isValid = true;
+
+        if (!nameRegex.test(name)) {
+            document.getElementById('nameError').innerHTML = 'Name should be at least 3 characters long';
+            isValid = false;
+        } else {
+            document.getElementById('nameError').innerHTML = '';
+        }
+
+        if (!phoneRegex.test(phone)) {
+            document.getElementById('phoneError').innerHTML = 'Please enter a valid 10-digit phone number.';
+            isValid = false;
+        } else {
+            document.getElementById('phoneError').innerHTML = '';
+        }
+
+        if (!emailRegex.test(email)) {
+            document.getElementById('emailError').innerHTML = 'Please enter a valid email address.';
+            isValid = false;
+        } else {
+            document.getElementById('emailError').innerHTML = '';
+        }
+
+        if (address.length < 6) {
+            document.getElementById('addressError').innerHTML = 'Address should be at least 6 characters long.';
+            isValid = false;
+        } else {
+            document.getElementById('addressError').innerHTML = '';
+        }
+
+        if (service === '') {
+            document.getElementById('serviceError').innerHTML = 'Please select a service.';
+            isValid = false;
+        } else {
+            document.getElementById('serviceError').innerHTML = '';
+        }
+
+        return isValid;
+    }
+
+    //bydefult
+    document.addEventListener("DOMContentLoaded", function() {
+        var selectedCourse = localStorage.getItem('selectedCourse');
+        if (selectedCourse) {
+            document.getElementById('course').value = selectedCourse;
+        }
+    });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Infotech</title>
+    <link rel="icon" href="./Images File/logo.png">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(90deg, rgb(234, 235, 244) 0%, rgb(94, 193, 238) 40%, rgb(234, 235, 244) 100%);
+            justify-content: center;
+            align-items: center;
+        }
+        .form-container {
+            background-color: transparent;
+            max-width: 600px;
+            margin-top: 30px;
+        }
+        .btn {
+            background-color: navy;
+            width: 100%;
+        }
+        input {
+            height: 20px;
+        }
+        .form-container .card {
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: rgb(195, 229, 243);
+            border-radius: 10px;
+        }
+        .form-container .card h2 {
+            margin-bottom: 20px;
+            font-size: 40px;
+            font-weight: bold;
+            color: navy;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.875em;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container form-container">
+        <div class="card">
+            <h2 class="text-center">Book a Demo</h2>
+            <form id="demoForm" method="post" action="DF.php">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required >
+                    <div class="error-message" id="nameError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="number" class="form-control" name="mobile" id="mobile" placeholder="Enter your mobile number" required >
+                    <div class="error-message" id="mobileError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email ID</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required >
+                    <div class="error-message" id="emailError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="qualification">Qualification</label>
+                    <select class="form-control" name="qualification" id="qualification" required>
+                        <option value="" disabled selected>Select your qualification</option>
+                        <option value="highschool">High School</option>
+                        <option value="bachelor">Bachelor's</option>
+                        <option value="master">Master's</option>
+                        <option value="phd">PhD</option>
+                    </select>
+                    <div class="error-message" id="qualificationError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" name="address" id="address" placeholder="Enter your address" required >
+                    <div class="error-message" id="addressError"></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" name="city" id="city" placeholder="City" required>
+                        <div class="error-message" id="cityError"></div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="district">District</label>
+                        <input type="text" class="form-control" name="district" id="district" placeholder="District" required >
+                        <div class="error-message" id="districtError"></div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="state">State</label>
+                        <input type="text" class="form-control" name="state" id="state" placeholder="State" required >
+                        <div class="error-message" id="stateError"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="demoStartDate">Demo Date</label>
+                    <input type="datetime-local" class="form-control" name="datetime" id="demoStartDate" required>
+                    <div class="error-message" id="demoStartDateError"></div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('demoForm').addEventListener('submit', function(event) {
+            let valid = true;
+
+            // Name validation
+            const name = document.getElementById('name').value;
+            const nameError = document.getElementById('nameError');
+            if (name.length < 3) {
+                valid = false;
+                nameError.textContent = 'Name must be at least 3 characters long.';
+            } else {
+                nameError.textContent = '';
+            }
+
+            // Address validation
+            const address = document.getElementById('address').value;
+            const addressError = document.getElementById('addressError');
+            if (address.length < 6) {
+                valid = false;
+                addressError.textContent = 'Address must be at least 6 characters long.';
+            } else {
+                addressError.textContent = '';
+            }
+
+            // Mobile validation
+            const mobile = document.getElementById('mobile').value;
+            const mobileError = document.getElementById('mobileError');
+            const mobileRegex = /^\d{10}$/;
+            if (!mobileRegex.test(mobile)) {
+                valid = false;
+                mobileError.textContent = 'Mobile number must be exactly 10 digits.';
+            } else {
+                mobileError.textContent = '';
+            }
+
+            // Email validation
+            const email = document.getElementById('email').value;
+            const emailError = document.getElementById('emailError');
+            if (!email.includes('@')) {
+                valid = false;
+                emailError.textContent = 'Email must contain @.';
+            } else {
+                emailError.textContent = '';
+            }
+
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
